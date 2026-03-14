@@ -1,0 +1,17 @@
+body{
+    background-color: aliceblue;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav li:first-child{
+    margin-top: 100px;
+}
+nav a{
+    padding: 1em 1.5em;
+    list-style: none;
+    text-decoration: none;
+}
