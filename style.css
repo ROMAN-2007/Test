@@ -1,106 +1,145 @@
-*{
+* {
   margin: 0;
 }
+
 body {
   display: grid;
   font-family: sans-serif;
   min-height: 100vh;
   background: #f5f5f5;
-  grid-template-columns: 100px 1fr ;
+  grid-template-columns: 100px 1fr;
   grid-template-rows: auto 1fr;
-  grid-template-areas: 
-  "navbar  navbar"
-  "sidebar main";
+  grid-template-areas:
+    "navbar  navbar"
+    "sidebar main";
   --primary-color: #4FC6CE;
-    --accent-01: #DBDBDB;
-    --accent-02: #98B1BA;
-    --accent-03: #26333A;
-    --accent-04: #1A2328;
+  --accent-01: #DBDBDB;
+  --accent-02: #98B1BA;
+  --accent-03: #26333A;
+  --accent-04: #1A2328;
 }
 
+/* navbar */
+.navbar {
+  grid-area: navbar;
+  background-color: var(--accent-03);
+}
 
+nav {
+  background-color: var(--accent-03);
+  padding: 30px;
+
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav ul {
+  justify-content: right;
+}
+
+nav li:first-child {
+  justify-content: left;
+}
+
+nav li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+nav a:hover {
+  text-shadow: #1A2328;
+  color: #4FC6CE;
+}
+
+/* sidebar */
 aside {
   background-color: #1A2328;
   padding: 10px;
   border-radius: 10px;
 }
-aside a{
-    list-style: none;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    font-size: 30px;
-    color: white;
-    padding: 20px;
-    width: 20px;
+
+aside a {
+  list-style: none;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  padding: 20px;
+  width: 20px;
 
 }
-aside a:last-child{
+
+aside a:last-child {
   margin-top: 15vh;
   margin-left: 5px;
 }
-.navbar {
-    grid-area: navbar;
-    background-color: var(--accent-03);
-}
-nav {
-    background-color: var(--accent-03);
-    padding: 10px;
-    border-radius: 10px;
 
-}
-nav ul {
-  display: flex;
-  justify-content: right ;
-  gap: 20px;
-}
-nav li{
-  list-style: none;
-}
-li a{
-  text-decoration: none;
-  color: #f5f5f5;
-}
-nav a:hover{
-  text-shadow: #1A2328;
-  color: #4FC6CE;
-}
-aside ion-icon:hover{
+aside ion-icon:hover {
   color: #4FC6CE;
 }
 
 #PremierTrait {
-    height: 1px;
-    width: 25%;
-    margin: 25px;
-    background-color:antiquewhite;
-    font-size: 10em;
-    text-shadow: 10px 30px 20px black;
-    margin-top: 20px;
+  height: 1px;
+  width: 25%;
+  margin: 25px;
+  background-color: antiquewhite;
+  font-size: 10em;
+  text-shadow: 10px 30px 20px black;
+  margin-top: 20px;
 }
+
 #DeuxiemeTrait {
-    height: 1px;
-    width: 25%;
-    margin: 25px;
-    background-color: antiquewhite;
-    font-size: 10em;
-    text-shadow: 10px 30px 20px black;
-     margin-top: 20px;
+  height: 1px;
+  width: 25%;
+  margin: 25px;
+  background-color: antiquewhite;
+  font-size: 10em;
+  text-shadow: 10px 30px 20px black;
+  margin-top: 20px;
 }
 
-h1:first-child{
- justify-content: center;
- align-items: center;
- text-align: center;
+/* Main */
+
+.graph{
+  width: 25em;
+  height: 30em;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #b6b6b6;
+}
+.graph img{
+  width: 25em;
+  border-radius: 20px;
+}
+
+.social {
+  float: right;
+   width: 220px;
+  height: 95%;
+}
+
+.social h2 {
+  text-align: center;
+}
+
+.users {
+  background-color: #b6b6b6;
+   width: 220px;
+  height: 97%;
+  border-radius: 50px;
+ 
 }
 
 
-.friends{
-  padding-left: 20px;
-}
-
-
-.toggle{
+.toggle {
   background-color: lightgray;
   padding: 15px;
   border-radius: 20px;
@@ -110,33 +149,17 @@ h1:first-child{
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  background-color: lightgray; 
+  background-color: lightgray;
   border-radius: 15px;
 }
 
 .toggle button.active {
-  background-color: dodgerblue; /* couleur quand actif */
+  background-color: dodgerblue;
+  /* couleur quand actif */
   color: white;
 }
-.table{
-    background-color: antiquewhite;
-    width: 550px;
-    height: 300px;
-    border-radius: 20px;
-    
-}
-.chat{
-    background-color: #6a1b9a;
-    padding: 30px 30px 20% 30px;
-    border-radius: 20px;
-    margin-right: 20% ;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.item:nth-child(4){
-    background-color: lightgray;
-    padding: 15px;
-    border-radius: 20px;
-    
+.item:nth-child(4) {
+  background-color: lightgray;
+  padding: 15px;
+  border-radius: 20px;
 }
