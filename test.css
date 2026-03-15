@@ -1,17 +1,33 @@
-body{
-    background-color: aliceblue;
+/* Thème clair par défaut */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
 }
 
-nav ul{
-    list-style: none;
-    display: flex;
+/* Thème sombre */
+body.sombre {
+  background-color: #121212;
+  color: #eeeeee;
 }
 
-nav li:first-child{
-    margin-top: 100px;
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
-nav a{
-    padding: 1em 1.5em;
-    list-style: none;
-    text-decoration: none;
+
+/* Style du bouton selon le thème */
+body:not(.sombre) #themeToggle {
+  background: #222;
+  color: #fff;
+}
+
+body.sombre #themeToggle {
+  background: #eee;
+  color: #222;
 }

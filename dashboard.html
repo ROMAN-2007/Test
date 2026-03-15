@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dashbord.css">
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
 </head>
@@ -13,35 +13,38 @@
 <body>
 
   <nav class="navbar">
+    <h1>Romles</h1>
+    <img src="graph.jpg" alt="">
     <ul>
       <li>
-        <a href=""> Romles</a>
-      </li>
-      <li>
-        <a id="toggleLien" href="">Sombre</a>
+        <button id="themeToggle"><ion-icon name="moon"></ion-icon></button>
       </li>
       <li>
         <a href="">Site</a>
       </li>
+
       <script src="script.js"></script>
     </ul>
   </nav>
   <aside>
-
-    <a href=""> <ion-icon name="notifications-outline"></ion-icon></a>
-    <div id="PremierTrait"></div>
-    <a href=""><ion-icon name="home-outline"></ion-icon></a>
-    <a href=""> <ion-icon name="logo-buffer"></ion-icon></a>
-    <a href=""><ion-icon name="chatbubble-ellipses-outline"></ion-icon></a>
-    <a href=""> <ion-icon name="people-outline"></ion-icon>
-    </a>
-    <a href=""> <ion-icon name="settings-outline"></ion-icon>
-    </a>
-    <div class="LogFlooter">
-      <div id="DeuxiemeTrait"></div><br>
-      <a href=""> <ion-icon name="log-out-outline"></ion-icon>
+    <div>
+      <a href=""> <ion-icon name="notifications-outline"></ion-icon></a>
+      <span class="badge" id="notifBadge">0</span>
+      <!-- <button id="addNotif">ajouter</button> -->
+      <script src="notificate.js"></script>
+      <div id="PremierTrait"></div>
+      <a href=""><ion-icon name="home-outline"></ion-icon></a>
+      <a href=""> <ion-icon name="logo-buffer"></ion-icon></a>
+      <a href=""><ion-icon name="chatbubble-ellipses-outline"></ion-icon></a>
+      <a href=""> <ion-icon name="people-outline"></ion-icon>
       </a>
-    </div>
+      <a href=""> <ion-icon name="settings-outline"></ion-icon>
+      </a>
+      <div class="LogFlooter">
+        <div id="DeuxiemeTrait"></div><br>
+        <a href=""> <ion-icon name="log-out-outline"></ion-icon>
+        </a>
+      </div>
   </aside>
 
   </div>

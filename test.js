@@ -1,13 +1,12 @@
 const toggleBtn = document.getElementById("themeToggle");
 const body = document.body;
-const icon = toggleBtn.querySelector("ion-icon");
 
 toggleBtn.addEventListener("click", () => {
   body.classList.toggle("sombre");
 
   if (body.classList.contains("sombre")) {
-    icon.setAttribute("name", "sunny"); // icône soleil
+    toggleBtn.textContent = "☀️ Clair";
   } else {
-    icon.setAttribute("name", "moon");  // icône lune
+    toggleBtn.textContent = "🌙 Sombre";
   }
 });
