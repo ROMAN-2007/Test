@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Dancing+Script:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    --primary-color: #4FC6CE;
+    --accent-01: #DBDBDB;
+    --accent-02: #98B1BA;
+    --accent-03: #26333A;
+    --accent-04: #1A2328;
+}
+/* NAVBAR */
+.navbar {
+    background-color: var(--accent-03);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.navbar h1 {
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Dancing Script';
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Advent pro';
+}
+
+/* ACCEUIL */
+
+.Acceuil{
+    background-image: url(pexels-sanaan-3125171.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 600px;
+    backface-visibility: hidden;
+}
+
+.Acceuil h1{
+    color: azure;
+    font-size: 50px;
+    font-weight: bold;
+    font-style:italic;
+    padding: 20px;
+    padding-top: 400px;
+}
+
+.Acceuil p{
+    color: white;
+    padding: 30px;
+    font-size: 30px;
+    display: flex;
+
+}
+
+.Acceuil div{
+    display: flex;
+    
+}
+
+
+
+
+
+
+
+/* CONTACT */
+
+.contact{
+    background-color: var(--accent-02);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+}
+
+.contact form{
+    justify-content: center;
+    padding: 20px;
+}
+form input, textarea{
+    padding: 10px;
+    font-size: 20px;
+    gap: 20px;
+    border: 2px solid black;
+    border-radius: 10px
+}
+
+/* FOOTER */
+
+footer{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

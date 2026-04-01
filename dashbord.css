@@ -6,7 +6,7 @@
 
 body {
   display: grid;
-  font-family: Advent sans-serif;
+  font-family: 'Advent' sans-serif;
   min-height: 100vh;
   background: #f5f5f5;
   grid-template-columns: 100px 1fr;
@@ -90,7 +90,7 @@ nav ion-icon{
 aside {
   background-color: #1A2328;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 0 70px 0 50px;
 }
 .badge {
   position: relative;
@@ -167,6 +167,16 @@ aside ion-icon:hover {
   height: 90%;
   padding: 10px;
 }
+#users {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 300px;
+  height: 80%;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
 
 .social h2 {
   text-align: center;
@@ -174,7 +184,7 @@ aside ion-icon:hover {
 
 .users {
   background-color: #b6b6b6;
-   width: 220px;
+   width: 300px;
   height: 95%;
   border-radius: 30px;
  
@@ -185,6 +195,9 @@ aside ion-icon:hover {
   background-color: lightgray;
   padding: 15px;
   border-radius: 20px;
+    justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .toggle button{
   font-family: Advent Pro;
@@ -193,7 +206,7 @@ aside ion-icon:hover {
 
 .toggle button {
   padding: 10px 20px;
-  border: none;
+  border: 1px solid black;
   cursor: pointer;
   background-color: lightgray;
   border-radius: 15px;
@@ -201,11 +214,66 @@ aside ion-icon:hover {
 
 .toggle button.active {
   background-color: dodgerblue;
-  /* couleur quand actif */
   color: white;
 }
-.item:nth-child(4) {
-  background-color: lightgray;
-  padding: 15px;
-  border-radius: 20px;
+
+
+.chat {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.hidden {
+  display: none;
+}
+
+.chatHeader {
+  background: #4267B2;
+  color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatMessages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.chatInput {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.chatInput input {
+  flex: 1;
+  border: 1px solid black;
+  padding: 5px;
+ border-radius: 5px;
+ font-family: 'Advent';
+ font-size: 15px;
+}
+
+.chatInput button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: black;
+  background-color: #7f8694;
+  border-radius: 40%;
+}
+.chatInput ion-icon{
+  transform: rotate(-40deg);
 }

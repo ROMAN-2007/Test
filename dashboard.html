@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>DashBord</title>
   <link rel="stylesheet" href="dashbord.css">
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
@@ -23,7 +23,7 @@
         <a href="">Site</a>
       </li>
 
-      <script src="script.js"></script>
+      <script src="js/theme.js"></script>
     </ul>
   </nav>
   <aside>
@@ -31,12 +31,12 @@
       <a href=""> <ion-icon name="notifications-outline"></ion-icon></a>
       <span class="badge" id="notifBadge">0</span>
       <!-- <button id="addNotif">ajouter</button> -->
-      <script src="notificate.js"></script>
+      <script src="js/notificate.js"></script>
       <div id="PremierTrait"></div>
       <a href=""><ion-icon name="home-outline"></ion-icon></a>
       <a href=""> <ion-icon name="logo-buffer"></ion-icon></a>
-      <a href=""><ion-icon name="chatbubble-ellipses-outline"></ion-icon></a>
-      <a href=""> <ion-icon name="people-outline"></ion-icon>
+      <a href="#chatBox"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></a>
+      <a href="#users"> <ion-icon name="people-outline"></ion-icon>
       </a>
       <a href=""> <ion-icon name="settings-outline"></ion-icon>
       </a>
@@ -52,7 +52,9 @@
 
   <main>
     <h1><i>DashBord</i></h1>
-    <div class="social">
+
+    <!-- users -->
+    <div id="users" class="social">
       <h2>Utilisateurs</h2>
       <div class="users">
         <div class="toggle">
@@ -60,8 +62,25 @@
           <button id="btn-enligne">En ligne</button>
         </div>
       </div>
-      <script src="toggle.js"></script>
+      <script src="js/toggle.js"></script>
+      <script src="js/users.js"></script>
     </div>
+    <!-- chat -->
+  <div id="chatBox" class="chat hidden">
+  <div class="chatHeader">
+    <span>Chat</span>
+    <button id="closeChat">
+      <ion-icon name="close"></ion-icon>
+    </button>
+  </div>
+  <div class="chatMessages" id="chatMessages">
+  </div>
+  <div class="chatInput">
+    <input type="text" id="chatInputField" placeholder="Écrire un message...">
+    <button id="sendBtn"><ion-icon name="send-sharp"></ion-icon></button>
+  </div>
+</div>
+<script src="js/chat.js"></script>
 
 
 

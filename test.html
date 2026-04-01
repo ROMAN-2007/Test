@@ -1,17 +1,32 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Toggle Thème</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <link rel="stylesheet" href="test.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
 </head>
+
 <body>
-  <button id="themeToggle">🌙 Sombre</button>
+<div id="chatBox" class="chat hidden">
+  <div class="chatHeader">
+    <span>Chat</span>
+    <button id="closeChat">✖</button>
+  </div>
+  <div class="chatMessages" id="chatMessages">
+    <!-- Les messages apparaîtront ici -->
+  </div>
+  <div class="chatInput">
+    <input type="text" id="chatInputField" placeholder="Écrire un message...">
+    <button id="sendBtn"><ion-icon name="send-outline"></ion-icon></button>
+  </div>
+</div>
 
-  <h1>Bienvenue</h1>
-  <p>Ceci est un exemple de bascule clair/sombre.</p>
+  </div>
 
-  <!-- IMPORTANT : le script doit être chargé après le HTML -->
-  <script src="test.js"></script>
 </body>
+
 </html>
