@@ -158,7 +158,8 @@ aside ion-icon:hover {
 }
 .graph p{
   text-align: center;
-  font-family: Advent;
+  font-family: 'Advent';
+  color: #121212;
 }
 
 .social {
@@ -223,13 +224,14 @@ aside ion-icon:hover {
   bottom: 10px;
   right: 10px;
   width: 300px;
-  height: 400px;
+  height: 500px;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  color: #121212;
 }
 
 .hidden {

@@ -21,7 +21,7 @@ sendBtn.addEventListener('click', () => {
   if (message !== "") {
     const msgDiv = document.createElement('div');
     msgDiv.classList.add('message', 'user2');
-    msgDiv.textContent = "Moi: " + message;
+    msgDiv.textContent = "Moi😀: " + message;
     chatMessages.appendChild(msgDiv);
     chatInputField.value = "";
     chatMessages.scrollTop = chatMessages.scrollHeight;
