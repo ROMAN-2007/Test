@@ -1,13 +1,11 @@
-const toggleBtn = document.getElementById("themeToggle");
-const body = document.body;
-const icon = toggleBtn.querySelector("ion-icon");
+const HomeIcon = document.querySelector('main a[href="#home"]');
+const home = document.getElementById('home');
 
-toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("sombre");
-
-  if (body.classList.contains("sombre")) {
-    icon.setAttribute("name", "sunny");
-  } else {
-    icon.setAttribute("name", "moon");  
+HomeIcon.addEventListener('click', (e) =>{
+  e.preventDefault();
+  if (home.style.display === "none" || home.style.display === ""){
+    home.style.display = "block";
+  }else{
+    home.style.display = "none";
   }
 });

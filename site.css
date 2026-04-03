@@ -12,15 +12,18 @@ body {
     --accent-03: #26333A;
     --accent-04: #1A2328;
 }
+
 /* NAVBAR */
 .navbar {
     background-color: var(--accent-03);
-    padding: 20px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
     color: white;
+    position: fixed;
+    width: 100%;
 }
 
 .navbar h1 {
@@ -45,9 +48,10 @@ nav a {
     font-family: 'Advent pro';
 }
 
+
 /* ACCEUIL */
 
-.Acceuil{
+.Acceuil {
     background-image: url(pexels-sanaan-3125171.jpg);
     background-position: center;
     background-size: cover;
@@ -56,30 +60,71 @@ nav a {
     width: 100%;
     height: 600px;
     backface-visibility: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
 }
 
-.Acceuil h1{
+.Acceuil h1 {
     color: azure;
     font-size: 50px;
     font-weight: bold;
-    font-style:italic;
-    padding: 20px;
-    padding-top: 400px;
+    font-style: italic;
 }
 
-.Acceuil p{
-    color: white;
-    padding: 30px;
+
+.Acceuil p {
+    color: azure;
     font-size: 30px;
-    display: flex;
+}
+
+.paragraph {
+    width: 700px;
+    height: 400px;
+    padding-top: 350px;
+}
+
+.button {
+    padding: 10px;
+    padding-top: 50%;
+    float: right;
 
 }
 
-.Acceuil div{
-    display: flex;
-    
+button {
+    padding: 15px;
+    border-radius: 15px;
+    font-family: 'dancing script';
+    font-weight: bold;
 }
 
+.btn1 {
+    background-color: red;
+    color: #eee;
+    font-size: 20px;
+}
+
+.btn2 {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+
+.btn1:hover {
+    background-color: #4FC6CE;
+    color: #1A2328;
+    transform: scale(1.15);
+    opacity: 1.5;
+    transition: 1.2s ease-in-out;
+}
+
+.btn2:hover {
+    background-color: #4FC6CE;
+    color: #1A2328;
+    transform: scale(1.15);
+    opacity: 1.5;
+    transition: 1.2s ease-in-out;
+}
 
 
 
@@ -88,7 +133,7 @@ nav a {
 
 /* CONTACT */
 
-.contact{
+.contact {
     background-color: var(--accent-02);
     justify-content: center;
     align-items: center;
@@ -96,11 +141,13 @@ nav a {
     padding: 50px;
 }
 
-.contact form{
+.contact form {
     justify-content: center;
     padding: 20px;
 }
-form input, textarea{
+
+form input,
+textarea {
     padding: 10px;
     font-size: 20px;
     gap: 20px;
@@ -110,7 +157,7 @@ form input, textarea{
 
 /* FOOTER */
 
-footer{
+footer {
     justify-content: center;
     align-items: center;
     text-align: center;

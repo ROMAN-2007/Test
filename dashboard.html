@@ -14,7 +14,23 @@
 
   <nav class="navbar">
     <h1>Romles</h1>
-    <img src="graph.jpg" alt="">
+<div class="photo-container">
+    <img id="preview" src="default.jpg" alt="Photo" class="photo">
+    <label for="fileInput" class="add-photo">+</label>
+    <input type="file" id="fileInput" accept="image/*" style="display:none;">
+</div>
+<script>
+  document.getElementById("fileInput").addEventListener("change", function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById("preview").src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+});
+</script>
     <ul>
       <li>
         <button id="themeToggle"><ion-icon name="moon"></ion-icon></button>
@@ -33,7 +49,7 @@
       <!-- <button id="addNotif">ajouter</button> -->
       <script src="js/notificate.js"></script>
       <div id="PremierTrait"></div>
-      <a href=""><ion-icon name="home-outline"></ion-icon></a>
+      <a href="#home"><ion-icon name="home-outline"></ion-icon></a>
       <a href=""> <ion-icon name="logo-buffer"></ion-icon></a>
       <a href="#chatBox"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></a>
       <a href="#users"> <ion-icon name="people-outline"></ion-icon>
@@ -52,7 +68,21 @@
 
   <main>
     <h1><i>DashBord</i></h1>
+    <!-- home -->
+<div id="home" class="hidden">
+  <div class="home">
+    <img src="graph.jpg" alt="">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+      Fuga similique distinctio illo illum amet, sed mollitia veritatis 
+      neque magnam incidunt explicabo aliquam, earum, quos reiciendis 
+      nulla sit odio tempora praesentium?
+    </p>
+  </div>
+</div>
 
+<script src="script.js"></script>
+  
     <!-- users -->
     <div id="users" class="social">
       <h2>Utilisateurs</h2>
@@ -66,31 +96,26 @@
       <script src="js/users.js"></script>
     </div>
     <!-- chat -->
-  <div id="chatBox" class="chat hidden">
-  <div class="chatHeader">
-    <span>Chat</span>
-    <button id="closeChat">
-      <ion-icon name="close"></ion-icon>
-    </button>
-  </div>
-  <div class="chatMessages" id="chatMessages">
-  </div>
-  <div class="chatInput">
-    <input type="text" id="chatInputField" placeholder="Écrire un message...">
-    <button id="sendBtn"><ion-icon name="send-sharp"></ion-icon></button>
-  </div>
-</div>
-<script src="js/chat.js"></script>
-
-
-
-
-    <div class="graph">
-      <img src="graph.jpg" alt="">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga similique distinctio illo illum amet, sed
-        mollitia veritatis neque magnam incidunt explicabo aliquam, earum, quos reiciendis nulla sit odio tempora
-        praesentium?</p>
+    <div id="chatBox" class="chat hidden">
+      <div class="chatHeader">
+        <span>Chat</span>
+        <button id="closeChat">
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </div>
+      <div class="chatMessages" id="chatMessages">
+      </div>
+      <div class="chatInput">
+        <input type="text" id="chatInputField" placeholder="Écrire un message...">
+        <button id="sendBtn"><ion-icon name="send-sharp"></ion-icon></button>
+      </div>
     </div>
+    <script src="js/chat.js"></script>
+
+
+
+
+
   </main>
 
 

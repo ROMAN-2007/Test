@@ -7,26 +7,32 @@
   <title>Document</title>
   <link rel="stylesheet" href="test.css">
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <link  href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
 
 </head>
 
 <body>
-<div id="chatBox" class="chat hidden">
-  <div class="chatHeader">
-    <span>Chat</span>
-    <button id="closeChat">✖</button>
-  </div>
-  <div class="chatMessages" id="chatMessages">
-    <!-- Les messages apparaîtront ici -->
-  </div>
-  <div class="chatInput">
-    <input type="text" id="chatInputField" placeholder="Écrire un message...">
-    <button id="sendBtn"><ion-icon name="send-outline"></ion-icon></button>
-  </div>
+<div class="photo-container">
+    <!-- Image affichée -->
+    <img id="preview" src="default.jpg" alt="Photo" class="photo">
+
+    <!-- Bouton + pour choisir un fichier -->
+    <label for="fileInput" class="add-photo">+</label>
+    <input type="file" id="fileInput" accept="image/*" style="display:none;">
 </div>
-
-  </div>
-
+<script>
+  document.getElementById("fileInput").addEventListener("change", function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById("preview").src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+});
+</script>
 </body>
 
 </html>

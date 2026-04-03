@@ -1,26 +1,29 @@
-.sendBtn ion-icon {
-  transform: rotate(-40deg);
-  padding: 10px;
-  margin-top: -;
+.photo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espace entre l'image et le + */
 }
-.chatBox{
-  width: 20%;
-  height: 200px;
-  background-color: aqua;
-  text-align: center;
-  align-items: center;
+
+.photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 360%;
+    border: 1px solid #ccc;
 }
-.chatBox input{
-  padding: 10px;
-}
-.chatBox button{
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-}
-.chat{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+
+.add-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    position: relative;
+    top: 35px;
+    left: -35px;
 }
