@@ -2,37 +2,40 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="test.css">
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <link  href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
 
 </head>
 
 <body>
-<div class="photo-container">
-    <!-- Image affichée -->
-    <img id="preview" src="default.jpg" alt="Photo" class="photo">
+<form action="update_photo.php" method="POST" enctype="multipart/form-data">
+    <div class="photo-container">
+        <img id="preview" src="<?php echo $user['photo_profil'] ?? 'default.jpg'; ?>" alt="Photo" class="photo">
+        <label for="fileInput" class="add-photo">+</label>
+        <input type="file" id="fileInput" name="photo" accept="image/*" style="display:none;">
+    </div>
+    <button type="submit">Mettre à jour la photo</button>
+</form>
 
-    <!-- Bouton + pour choisir un fichier -->
-    <label for="fileInput" class="add-photo">+</label>
-    <input type="file" id="fileInput" accept="image/*" style="display:none;">
-</div>
 <script>
-  document.getElementById("fileInput").addEventListener("change", function(event) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            document.getElementById("preview").src = e.target.result;
-        };
-        reader.readAsDataURL(file);
-    }
-});
+    const fileInput = document.getElementById('fileInput');
+    const preview = document.getElementById('preview');
+
+    fileInput.addEventListener('change', function() {
+        const file = this.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = e => preview.src = e.target.result;
+            reader.readAsDataURL(file);
+        }
+    });
 </script>
+
 </body>
 
 </html>

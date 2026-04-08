@@ -172,25 +172,37 @@ aside ion-icon:hover {
 
 /* Main */
 
-#home{
-  width: 25em;
-  height: 30em;
+
+#home {
+  position: fixed;
+  width: 100%;
+  max-width: 50%;
+  border-radius: 8px;
   padding: 20px;
-  border-radius: 20px;
-  background-color: #b6b6b6;
+  z-index: 1000;
+  display: none; /* caché par défaut */
 }
-.hidden{
-  display: none;
+
+#home.active {
+  display: block; /* affiché quand actif */
+}
+.home{
+  background-color: #ccc;
+  width: 45%;
+  padding-block-end: 50px;
+  border-radius: 20px;
 }
 .home img{
   width: 25em;
   border-radius: 20px;
+  padding: 15px;
 }
 .home p{
-  text-align: center;
   font-family: 'Advent';
   color: #121212;
+  text-align: center;
 }
+
 
 .social {
   float: right;
